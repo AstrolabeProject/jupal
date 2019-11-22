@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  jupal:
+    # image: astrolabe/jupal:latest
+    image: jupal:devel
+    deploy:
+      restart_policy:
+        condition: none
+    environment:
+      - _JAVA_OPTIONS=-Xms512m -Xmx8192m
+    volumes:
+      - ./notebooks:/home/jovyan/work
+    ports:
+      - "9999:8888"
+
+
+networks:
+  default:
+    external: true
+    name: vos_net

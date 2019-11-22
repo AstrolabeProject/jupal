@@ -1,0 +1,13 @@
+.git
+.gitignore
+.dockerignore
+Dockerfile
+Dockerfile.aljl
+Dockerfile.juplab
+Makefile
+docker-compose.yml
+docker-compose-prod.yml
+/images
+**/__pycache__
+*~
+.DS_Store

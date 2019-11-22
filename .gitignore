@@ -1,0 +1,14 @@
+*.iws
+.idea/
+.DS_Store
+.settings
+/*.log
+/*.zip
+**/.gradle/
+/build/
+/dist/
+images
+/SAVE/
+out
+Dockerfile.aljl
+Dockerfile.juplab
