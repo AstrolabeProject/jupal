@@ -6,19 +6,19 @@ NAME=jupal
 PORT=9999
 STACK=al
 
-.PHONY: help build down exec run stop up
+.PHONY: help docker down exec run stop up
 
 help:
 	@echo 'Make what? help, build, exec, run'
-	@echo '    where: help  - show this help message'
-	@echo '           build - build the JupyterLab server image'
-	@echo '           down  - stop the JupyterLab server on the VOS network'
-	@echo '           exec  - exec into the running JupyterLab server (CLI arg: NAME=containerID)'
-	@echo '           run   - start a standalone JupyterLab server (for development)'
-	@echo '           stop  - stop a standalone JupyterLab server (for development)'
-	@echo '           up    - start a JupyterLab server on the VOS network'
+	@echo '  where: help   - show this help message'
+	@echo '         docker - build the JupyterLab server image'
+	@echo '         down   - stop the JupyterLab server on the VOS network'
+	@echo '         exec   - exec into the running JupyterLab server (CLI arg: NAME=containerID)'
+	@echo '         run    - start a standalone JupyterLab server (for development)'
+	@echo '         stop   - stop a standalone JupyterLab server (for development)'
+	@echo '         up     - start a JupyterLab server on the VOS network'
 
-build:
+docker:
 	docker build -t ${IMG} .
 
 down:
