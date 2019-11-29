@@ -4,7 +4,7 @@ IMG=jupal:devel
 JOPTS='_JAVA_OPTIONS=-Xms512m -Xmx8192m'
 NAME=jupal
 PORT=9999
-STACK=al
+STACK=loc
 
 .PHONY: help docker down exec run stop up
 
