@@ -27,7 +27,7 @@ RUN jupyter lab --version \
     && jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.1
 
 # install other PIP packages
-RUN pip install pyvo
+RUN pip install pyvo firefly_client
 
 # mount points for optional external user data and work volumes
 RUN mkdir -p /home/jovyan/data /home/jovyan/work
