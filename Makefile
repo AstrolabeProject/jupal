@@ -9,7 +9,7 @@ STACK=loc
 .PHONY: help docker down exec run stop up
 
 help:
-	@echo 'Make what? help, build, exec, run'
+	@echo 'Make what? help, docker, down, exec, run, stop, up'
 	@echo '  where: help   - show this help message'
 	@echo '         docker - build the JupyterLab server image'
 	@echo '         down   - stop the JupyterLab server on the VOS network'
