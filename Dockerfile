@@ -29,8 +29,8 @@ RUN jupyter lab --version \
 # install other PIP packages
 RUN pip install pyvo firefly_client
 
-# mount points for optional external user data and work volumes
-RUN mkdir -p /home/jovyan/data /home/jovyan/work
+# mount points for optional external user data and sample notebooks
+RUN mkdir -p /home/jovyan/data /home/jovyan/notebooks
 
 ENTRYPOINT ["jupyter"]
 CMD ["lab", "--no-browser"]

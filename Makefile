@@ -29,7 +29,7 @@ exec:
 	docker exec -it ${NAME} bash
 
 run:
-	docker run -it --rm --name ${NAME} -e ${JOPTS} -p${PORT}:8888 -v ${ALNB}:/home/jovyan/work ${IMG}
+	docker run -it --rm --name ${NAME} -e ${JOPTS} -p${PORT}:8888 -v ${ALNB}:/home/jovyan/notebooks ${IMG}
 
 stop:
 	docker stop ${NAME}
