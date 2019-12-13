@@ -6,7 +6,7 @@ USER root
 
 # Install the icommands, curl, and wget
 RUN apt-get update \
-    && apt-get install -y lsb wget gnupg apt-transport-https python3.7 python-requests curl \
+    && apt-get install -y --no-install-recommends wget gnupg curl python3.7 \
     && apt-get clean \
     && rm -rf /usr/lib/apt/lists/* \
     && fix-permissions $CONDA_DIR
