@@ -1,6 +1,6 @@
 ALNB=${PWD}/notebooks
 ENVLOC=/etc/trhenv
-IMG=jupal:devel
+IMG=jupal:1H
 JOPTS='_JAVA_OPTIONS=-Xms512m -Xmx8192m'
 NAME=jupal
 NET=vos_net
@@ -37,3 +37,6 @@ stop:
 
 up:
 	docker stack deploy -c docker-compose.yml ${STACK}
+
+%:
+	@:
