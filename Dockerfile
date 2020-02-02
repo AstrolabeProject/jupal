@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook
+FROM jupyter/scipy-notebook:7a0c7325e470
 
 COPY jupyter_notebook_config.json /opt/conda/etc/jupyter/jupyter_notebook_config.json
 
@@ -6,7 +6,7 @@ USER root
 
 # Install the icommands, curl, and wget
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends wget gnupg curl python3.7 \
+    && apt-get install -y lsb wget gnupg apt-transport-https python3.7 python-requests curl \
     && apt-get clean \
     && rm -rf /usr/lib/apt/lists/* \
     && fix-permissions $CONDA_DIR
@@ -27,10 +27,11 @@ RUN jupyter lab --version \
     && jupyter labextension install @jupyter-widgets/jupyterlab-manager@1.1
 
 # install other PIP packages
-RUN pip install pyvo firefly_client
+#RUN pip install pyvo firefly_client
+RUN pip install pyvo
 
-# mount points for optional external user data and sample notebooks
-RUN mkdir -p /home/jovyan/data /home/jovyan/notebooks
+# mount points for optional external user data and work directory with sample notebooks
+RUN mkdir -p /home/jovyan/data /home/jovyan/work
 
 ENTRYPOINT ["jupyter"]
 CMD ["lab", "--no-browser"]
