@@ -3,6 +3,7 @@ ENVLOC=/etc/trhenv
 IMG=jupal:devel
 JOPTS='_JAVA_OPTIONS=-Xms512m -Xmx8192m'
 NAME=jupal
+NET=vos_net
 PORT=9999
 STACK=loc
 
@@ -29,7 +30,7 @@ exec:
 	docker exec -it ${NAME} bash
 
 run:
-	docker run -it --rm --name ${NAME} -e ${JOPTS} -p${PORT}:8888 -v ${ALNB}:/home/jovyan/notebooks ${IMG}
+	docker run -it --rm --name ${NAME} --network ${NET} -e ${JOPTS} -p${PORT}:8888 -v ${ALNB}:/home/jovyan/notebooks ${IMG}
 
 stop:
 	docker stop ${NAME}
