@@ -10,7 +10,8 @@ services:
     environment:
       - _JAVA_OPTIONS=-Xms512m -Xmx8192m
     volumes:
-      - ./notebooks:/home/jovyan/notebooks
+      - ./data:/home/jovyan/data
+      - ./work:/home/jovyan/work
     ports:
       - "9999:8888"
 
