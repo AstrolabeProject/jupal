@@ -1,4 +1,5 @@
-ALNB=${PWD}/notebooks
+ALDATA=${PWD}/data
+ALWORK=${PWD}/work
 ENVLOC=/etc/trhenv
 IMG=jupal:1H
 JOPTS='_JAVA_OPTIONS=-Xms512m -Xmx8192m'
@@ -30,13 +31,10 @@ exec:
 	docker exec -it ${NAME} bash
 
 run:
-	docker run -it --rm --name ${NAME} --network ${NET} -e ${JOPTS} -p${PORT}:8888 -v ${ALNB}:/home/jovyan/notebooks ${IMG}
+	docker run -it --rm --name ${NAME} --network ${NET} -e ${JOPTS} -p${PORT}:8888 -v ${ALWORK}:/home/jovyan/work -v ${ALDATA}:/home/jovyan/data ${IMG}
 
 stop:
 	docker stop ${NAME}
 
 up:
 	docker stack deploy -c docker-compose.yml ${STACK}
-
-%:
-	@:
