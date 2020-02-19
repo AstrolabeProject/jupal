@@ -1,4 +1,4 @@
-FROM jupyter/scipy-notebook:7a0c7325e470
+FROM jupyter/scipy-notebook:31b807ec9e83
 
 COPY jupyter_notebook_config.json /opt/conda/etc/jupyter/jupyter_notebook_config.json
 
@@ -16,9 +16,10 @@ USER jovyan
 
 # install foundational jupyter lab and tools
 RUN conda update -n base conda
-RUN conda install jupyterlab=1.2.1 \
+RUN conda install jupyterlab=1.2.6 \
     && conda install -c conda-forge ipywidgets \
     && conda install -c astropy astroquery \
+    && conda install -c wwt pywwt \
     && conda clean -tipsy \
     && fix-permissions $CONDA_DIR
 
