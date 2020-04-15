@@ -15,12 +15,13 @@ RUN apt-get update \
 USER jovyan
 
 # install foundational jupyter lab and tools
-RUN conda update -n base conda
+RUN conda info
+RUN conda update -c default -n base conda
 RUN conda install jupyterlab=1.2.6 \
     && conda install -c conda-forge ipywidgets \
     && conda install -c astropy astroquery \
     && conda install -c wwt pywwt \
-    && conda clean -tipsy \
+    && conda clean -tipy \
     && fix-permissions $CONDA_DIR
 
 # install jupyter hub and extra doodads
