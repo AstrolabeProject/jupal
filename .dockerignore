@@ -7,6 +7,7 @@ Dockerfile.juplab
 Makefile
 docker-compose.yml
 docker-compose-prod.yml
+/data
 /images
 **/__pycache__
 *~
