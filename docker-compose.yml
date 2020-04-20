@@ -8,15 +8,9 @@ services:
       restart_policy:
         condition: none
     environment:
-      - _JAVA_OPTIONS=-Xms512m -Xmx8192m
+      - _JAVA_OPTIONS=-Xms512m -Xmx8192m -Djava.security.egd=file:///dev/urandom
     volumes:
       - ./data:/home/jovyan/data
       - ./work:/home/jovyan/work
     ports:
       - "9999:8888"
-
-
-networks:
-  default:
-    external: true
-    name: vos_net
