@@ -18,9 +18,8 @@ USER jovyan
 RUN conda info
 RUN conda update -c default -n base conda
 RUN conda install jupyterlab=1.2.6 \
-    && conda install -c conda-forge ipywidgets \
     && conda install -c astropy astroquery \
-    && conda install -c wwt pywwt \
+    && conda install -c conda-forge ipywidgets pywwt \
     && conda clean -tipy \
     && fix-permissions $CONDA_DIR
 
