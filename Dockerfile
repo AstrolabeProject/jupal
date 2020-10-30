@@ -18,7 +18,7 @@ USER jovyan
 RUN conda info
 RUN conda update -c default -n base conda
 
-# install foundational jupyter lab and tools
+# install extra libraries
 RUN conda install -c conda-forge astropy astroquery pycairo pyYAML \
     && conda install -c conda-forge pywwt \
     && conda clean -tipy \
@@ -29,6 +29,8 @@ RUN pip install pyvo
 
 # mount points for optional external user data and work directory with sample notebooks
 RUN mkdir -p /home/jovyan/data /home/jovyan/work
+
+EXPOSE 8888
 
 ENTRYPOINT ["jupyter"]
 CMD ["lab", "--no-browser"]
