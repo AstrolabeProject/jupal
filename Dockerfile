@@ -27,6 +27,8 @@ RUN conda install -c conda-forge astropy astroquery pycairo pyYAML \
 # install other PIP packages
 RUN pip install pyvo
 
+RUN jupyter lab build
+
 # mount points for optional external user data and work directory with sample notebooks
 RUN mkdir -p /home/jovyan/data /home/jovyan/work
 
