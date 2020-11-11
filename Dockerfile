@@ -32,6 +32,8 @@ RUN jupyter lab build
 # mount points for optional external user data and work directory with sample notebooks
 RUN mkdir -p /home/jovyan/data /home/jovyan/work
 
+COPY /example-notebooks /home/jovyan/example-notebooks
+
 EXPOSE 8888
 
 ENTRYPOINT ["jupyter"]
