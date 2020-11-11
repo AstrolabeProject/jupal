@@ -1,7 +1,7 @@
 ALDATA=${PWD}/data
 ALWORK=${PWD}/work
 ENVLOC=/etc/trhenv
-IMG=jupal:devel
+IMG=astrolabe/jupal
 JOPTS='_JAVA_OPTIONS=-Xms512m -Xmx8192m -Djava.security.egd=file:///dev/urandom'
 NAME=jupal
 PORT=9999
