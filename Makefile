@@ -9,10 +9,9 @@ PORT=9999
 .PHONY: help docker exec run stop
 
 help:
-#	@echo 'Make what? help, docker, exec, run, stop'
-	@echo 'Make what? help, exec, run, stop'
+	@echo 'Make what? help, docker, exec, run, stop'
 	@echo '  where: help   - show this help message'
-#	@echo '         docker - build the JupyterLab server image'
+	@echo '         docker - build a custom JupyterLab server image (for developers)'
 	@echo '         exec   - exec into the running JupyterLab server (CLI arg: NAME=containerID)'
 	@echo '         run    - start a standalone JupyterLab server'
 	@echo '         stop   - stop a standalone JupyterLab server'
