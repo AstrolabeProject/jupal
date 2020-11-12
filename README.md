@@ -21,20 +21,16 @@ The latest JupAL image is available from the
 > docker pull astrolabe/jupal
 ```
 
-### Rebuilding the JupAL image using this project (OPTIONAL)
-
-Alternatively, if you are a developer, you can build your own JupAL image using the project Makefile:
-```
-> make docker
-```
 
 ### Create the Data and Work directories
 
-The Docker `run` command, contained in the project Makefile, assumes the existance of two subdirectories in the current directory: a `data` directory and a `work` directory. These directories are used by the JupAL container to access your data files and personal work notebooks. More technically, the `data` and `work` directories are *bind mounted* into the JupAL container as read-write mounts.
+The Docker `run` command, contained in the project Makefile, assumes the existence of two subdirectories in the current directory: a `data` directory and a `work` directory. These directories are used by the JupAL container to access your data files and personal work notebooks. More technically, the `data` and `work` directories are *bind mounted* into the JupAL container as read-write mounts.
 
 ***Note:** The JupyterLab server, and any notebooks it runs, will have both read and write access to the mounted `data` and `work` directories and can alter or delete files in those directories.*
 
-**Before running the JupAL container for the first time, you must create the `data` and `work` subdirectories, even if you do not intend to put any files into them:**
+***Note: If they do not already exist**, you must create the `data` and `work` subdirectories, even if you do not intend to put any files into them.*
+
+Directory creation, *if needed*, should be done before running the JupAL container for the first time, as follows:
 ```
 mkdir data work
 ```
@@ -50,7 +46,7 @@ At this point, using the Git program, you can easily add several great, example 
 
 ## Running the Astrolabe JupAL container
 
-Once the JupAL image is available on your local host (either by pulling or building), and you have created the data and work directories, you may start the server using the project Makefile:
+Once the JupAL image is available on your local host, and you have ensured that the `data` and `work` directories are present, you may start the server using the project Makefile:
 ```
   > make run
 ```
