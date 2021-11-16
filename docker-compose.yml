@@ -2,8 +2,7 @@ version: '3.7'
 
 services:
   jupal:
-    # image: astrolabe/jupal:latest
-    image: jupal:devel
+    image: astrolabe/jupal
     deploy:
       restart_policy:
         condition: none
