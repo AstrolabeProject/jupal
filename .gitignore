@@ -9,9 +9,10 @@
 /data/
 /images/
 /out/
-/work/WWT/
+/work/
 /SAVE/
 **/.gradle/
+**/.ipynb_checkpoints/
 **/__pycache__/
 **/*~
 Dockerfile.aljl
