@@ -4,6 +4,7 @@ ENVLOC=/etc/trhenv
 IMG=astrolabe/jupal
 JOPTS='_JAVA_OPTIONS=-Xms512m -Xmx8192m -Djava.security.egd=file:///dev/urandom'
 NAME=jupal
+NET=vos_net
 PORT=9999
 
 .PHONY: help docker exec run stop
@@ -24,7 +25,7 @@ exec:
 	docker exec -it ${NAME} bash
 
 run:
-	docker run -it --rm --name ${NAME} -e ${JOPTS} -p${PORT}:8888 -v ${ALWORK}:/home/jovyan/work -v ${ALDATA}:/home/jovyan/data ${IMG}
+	docker run -it --rm --name ${NAME} --network ${NET} -e ${JOPTS} -p${PORT}:8888 -v ${ALWORK}:/home/jovyan/work -v ${ALDATA}:/home/jovyan/data ${IMG}
 
 stop:
 	docker stop ${NAME}
