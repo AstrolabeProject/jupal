@@ -1,6 +1,6 @@
 FROM jupyter/scipy-notebook:lab-3.2.9
 
-COPY jupyter_notebook_config.json /opt/conda/etc/jupyter/jupyter_notebook_config.json
+COPY jupyter_server_config.json /opt/conda/etc/jupyter/jupyter_server_config.json
 
 USER root
 
