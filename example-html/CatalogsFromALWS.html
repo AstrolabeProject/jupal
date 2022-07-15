@@ -14559,12 +14559,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
                 },
                 displayAlign: 'center',
                 CommonHTML: {
-                    linebreaks: {
-                    automatic: true
+                    linebreaks: { 
+                    automatic: true 
                     }
                 }
             });
-
+        
             MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
         }
     }
@@ -14588,14 +14588,14 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Example notebook to query and/or retrieve catalogs from the AL/JWST Server via its API.</span>
 <span class="c1">#   Utilizes the ALWS_utils.ipynb notebook, which contains API helper classes and methods.</span>
 <span class="c1">#</span>
 <span class="c1">#  Written by: Tom Hicks. 5/13/2022.</span>
-<span class="c1">#  Last Modified: Add cone queries.</span>
+<span class="c1">#  Last Modified: Update for changes in the API.</span>
 </pre></div>
 
      </div>
@@ -14608,7 +14608,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
@@ -14628,7 +14628,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">astropy.coordinates</span> <span class="kn">import</span> <span class="n">SkyCoord</span>
@@ -14649,7 +14649,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -14677,7 +14677,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">run</span> ALWS_utils.ipynb
@@ -14704,7 +14704,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">api</span> <span class="o">=</span> <span class="n">AlwsApi</span><span class="p">()</span>
@@ -14731,7 +14731,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## Uncomment the following two lines to see the response when authorization fails:</span>
@@ -14753,7 +14753,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Fetch-a-catalog-file-(CSV)-from-the-Astrolabe-image-server">Fetch a catalog file (CSV) from the Astrolabe image server<a class="anchor-link" href="#Fetch-a-catalog-file-(CSV)-from-the-Astrolabe-image-server">&#182;</a></h2>
+<h2 id="Fetch-a-catalog-file-(CSV)-from-the-AL/JWST-image-server">Fetch a catalog file (CSV) from the AL/JWST image server<a class="anchor-link" href="#Fetch-a-catalog-file-(CSV)-from-the-AL/JWST-image-server">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -14773,10 +14773,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[37]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/names/&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/&#39;</span><span class="p">)</span>
 <span class="n">get_results</span><span class="p">(</span><span class="n">resp</span><span class="p">)</span>
 </pre></div>
 
@@ -14795,21 +14795,82 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[37]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[&#39;EZ_big&#39;,
- &#39;huge-cat&#39;,
- &#39;small10&#39;,
- &#39;small326&#39;,
- &#39;small75&#39;,
- &#39;test10&#39;,
- &#39;test100&#39;,
- &#39;test1k&#39;,
- &#39;test50&#39;]</pre>
+<pre>[{&#39;id&#39;: 7,
+  &#39;name&#39;: &#39;EZ_big&#39;,
+  &#39;description&#39;: &#39;32k+ records&#39;,
+  &#39;file_name&#39;: &#39;EAZY_results_summary.csv&#39;,
+  &#39;file_size&#39;: 4156122,
+  &#39;md5sum&#39;: &#39;8b93a25dd1b2cb52bd5eab80be6830bc&#39;,
+  &#39;row_count&#39;: 32602},
+ {&#39;id&#39;: 8,
+  &#39;name&#39;: &#39;HUGE-CAT&#39;,
+  &#39;description&#39;: &#39;Huge 92252 records from DC20&#39;,
+  &#39;file_name&#39;: &#39;huge-cat.csv&#39;,
+  &#39;file_size&#39;: 150177495,
+  &#39;md5sum&#39;: &#39;2cad735c501c577568262f2e4abf4248&#39;,
+  &#39;row_count&#39;: 92251},
+ {&#39;id&#39;: 14,
+  &#39;name&#39;: &#39;reupDummy70.csv&#39;,
+  &#39;description&#39;: &#39;reupload of same catalog&#39;,
+  &#39;file_name&#39;: &#39;dummy70.csv&#39;,
+  &#39;file_size&#39;: 8956,
+  &#39;md5sum&#39;: &#39;d47f82d7caf6419a5c723505f956ec4f&#39;,
+  &#39;row_count&#39;: 70},
+ {&#39;id&#39;: 1,
+  &#39;name&#39;: &#39;small10&#39;,
+  &#39;description&#39;: &#39;small test file of 10 records&#39;,
+  &#39;file_name&#39;: &#39;small10.csv&#39;,
+  &#39;file_size&#39;: 1361,
+  &#39;md5sum&#39;: &#39;4c0858e703f16899c6caceb079f7157d&#39;,
+  &#39;row_count&#39;: 10},
+ {&#39;id&#39;: 2,
+  &#39;name&#39;: &#39;small326&#39;,
+  &#39;description&#39;: &#39;relatively small table&#39;,
+  &#39;file_name&#39;: &#39;small_table.csv&#39;,
+  &#39;file_size&#39;: 41596,
+  &#39;md5sum&#39;: &#39;ac391f8bfa5de6e79d91a8cb5fe931dc&#39;,
+  &#39;row_count&#39;: 326},
+ {&#39;id&#39;: 13,
+  &#39;name&#39;: &#39;small75&#39;,
+  &#39;description&#39;: &#39;small table of 75 records&#39;,
+  &#39;file_name&#39;: &#39;small75.csv&#39;,
+  &#39;file_size&#39;: 9590,
+  &#39;md5sum&#39;: &#39;908c805ef40e6c4536c14a26387f8361&#39;,
+  &#39;row_count&#39;: 75},
+ {&#39;id&#39;: 4,
+  &#39;name&#39;: &#39;test10&#39;,
+  &#39;description&#39;: &#39;10 test records&#39;,
+  &#39;file_name&#39;: &#39;test10.csv&#39;,
+  &#39;file_size&#39;: 1350,
+  &#39;md5sum&#39;: &#39;2ed6f6a449505277fa50260a174d33e9&#39;,
+  &#39;row_count&#39;: 10},
+ {&#39;id&#39;: 3,
+  &#39;name&#39;: &#39;test100&#39;,
+  &#39;description&#39;: &#39;100 test records&#39;,
+  &#39;file_name&#39;: &#39;test100.csv&#39;,
+  &#39;file_size&#39;: 12604,
+  &#39;md5sum&#39;: &#39;703e8469b5f3e280c165efc8d7a976b6&#39;,
+  &#39;row_count&#39;: 100},
+ {&#39;id&#39;: 5,
+  &#39;name&#39;: &#39;test1k&#39;,
+  &#39;description&#39;: &#39;1k test records&#39;,
+  &#39;file_name&#39;: &#39;test1k.csv&#39;,
+  &#39;file_size&#39;: 126067,
+  &#39;md5sum&#39;: &#39;7b99709fe0fe67ca2fc224ac5501fed7&#39;,
+  &#39;row_count&#39;: 1000},
+ {&#39;id&#39;: 6,
+  &#39;name&#39;: &#39;test50&#39;,
+  &#39;description&#39;: &#39;50 test records&#39;,
+  &#39;file_name&#39;: &#39;test50.csv&#39;,
+  &#39;file_size&#39;: 6345,
+  &#39;md5sum&#39;: &#39;d43588bb74d94e881a13413585b1d25d&#39;,
+  &#39;row_count&#39;: 50}]</pre>
 </div>
 
 </div>
@@ -14825,7 +14886,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h4 id="Let's-get-more-information-about-the-small10-catalog.-To-do-so,-we-can-(1)-manually-construct-the-desired-URL-or-(2)-provide-a-dictionary-of-arguments-to-our-%22helper%22-function-and-allow-it-to-construct-the-URL.-Here-is-an-example-of-using-a-manually-constructed-URL:">Let's get more information about the <strong>small10</strong> catalog. To do so, we can (1) manually construct the desired URL or (2) provide a dictionary of arguments to our "helper" function and allow it to construct the URL. Here is an example of using a manually constructed URL:<a class="anchor-link" href="#Let's-get-more-information-about-the-small10-catalog.-To-do-so,-we-can-(1)-manually-construct-the-desired-URL-or-(2)-provide-a-dictionary-of-arguments-to-our-%22helper%22-function-and-allow-it-to-construct-the-URL.-Here-is-an-example-of-using-a-manually-constructed-URL:">&#182;</a></h4>
+<h4 id="Alternatively,-if-we-know-the-name-(or-filename)-of-a-catalog,-we-can-ask-for-information-on-just-that-catalog.-For-example,-we-can-ask-for-information-about-the-small10-catalog-only.-For-any-API-query,-we-can-(1)-manually-construct-the-desired-URL-or-(2)-provide-a-dictionary-of-arguments-to-our-%22helper%22-function-and-allow-it-to-construct-the-URL.-Here-is-an-example-of-using-a-manually-constructed-URL:">Alternatively, if we know the name (or filename) of a catalog, we can ask for information on just that catalog. For example, we can ask for information about the <strong>small10</strong> catalog only. For any API query, we can (1) manually construct the desired URL or (2) provide a dictionary of arguments to our "helper" function and allow it to construct the URL. Here is an example of using a manually constructed URL:<a class="anchor-link" href="#Alternatively,-if-we-know-the-name-(or-filename)-of-a-catalog,-we-can-ask-for-information-on-just-that-catalog.-For-example,-we-can-ask-for-information-about-the-small10-catalog-only.-For-any-API-query,-we-can-(1)-manually-construct-the-desired-URL-or-(2)-provide-a-dictionary-of-arguments-to-our-%22helper%22-function-and-allow-it-to-construct-the-URL.-Here-is-an-example-of-using-a-manually-constructed-URL:">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -14834,7 +14895,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_results</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/by_name/?catalog=small10&#39;</span><span class="p">))</span>
@@ -14855,7 +14916,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[38]:</div>
 
 
 
@@ -14892,7 +14953,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Compute some arguments and then call the &#39;get&#39; function with those arguments:</span>
@@ -14922,7 +14983,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[40]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_results</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/by_name/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;small10&#39;</span><span class="p">}))</span>
@@ -14943,7 +15004,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[11]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[40]:</div>
 
 
 
@@ -14980,7 +15041,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/fetch/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;small10&#39;</span><span class="p">})</span>
@@ -15004,7 +15065,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[41]:</div>
 
 
 
@@ -15285,7 +15346,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[42]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/rows/by_catalog/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;small10&#39;</span><span class="p">})</span>
@@ -15308,7 +15369,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[42]:</div>
 
 
 
@@ -15528,7 +15589,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfj</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">rec</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cols&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">rec</span> <span class="ow">in</span> <span class="n">jcat</span><span class="p">])</span>
@@ -15550,7 +15611,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[44]:</div>
 
 
 
@@ -15853,10 +15914,10 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[45]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_results</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/rows/query_cone/count/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;dec&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">27.831254438</span><span class="p">,</span> <span class="s1">&#39;ra&#39;</span><span class="p">:</span> <span class="mf">53.200010146</span><span class="p">,</span> <span class="s1">&#39;sizeArcSec&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">get_results</span><span class="p">(</span><span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/query_cone/counts/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;dec&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">27.831254438</span><span class="p">,</span> <span class="s1">&#39;ra&#39;</span><span class="p">:</span> <span class="mf">53.200010146</span><span class="p">,</span> <span class="s1">&#39;sizeArcSec&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">}))</span>
 </pre></div>
 
      </div>
@@ -15874,14 +15935,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[15]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[45]:</div>
 
 
 
 
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
-<pre>[{&#39;name&#39;: &#39;small326&#39;, &#39;id&#39;: 2, &#39;count&#39;: 10},
- {&#39;name&#39;: &#39;small75&#39;, &#39;id&#39;: 9, &#39;count&#39;: 10}]</pre>
+<pre>[{&#39;catalog_id&#39;: 7, &#39;catalog_name&#39;: &#39;EZ_big&#39;, &#39;row_count&#39;: 1025},
+ {&#39;catalog_id&#39;: 8, &#39;catalog_name&#39;: &#39;HUGE-CAT&#39;, &#39;row_count&#39;: 1524},
+ {&#39;catalog_id&#39;: 14, &#39;catalog_name&#39;: &#39;reupDummy70.csv&#39;, &#39;row_count&#39;: 10},
+ {&#39;catalog_id&#39;: 2, &#39;catalog_name&#39;: &#39;small326&#39;, &#39;row_count&#39;: 10},
+ {&#39;catalog_id&#39;: 13, &#39;catalog_name&#39;: &#39;small75&#39;, &#39;row_count&#39;: 10}]</pre>
 </div>
 
 </div>
@@ -15906,12 +15970,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/rows/fetch_cone/by_catalog/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;dec&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">27.831254438</span><span class="p">,</span> <span class="s1">&#39;ra&#39;</span><span class="p">:</span> <span class="mf">53.200010146</span><span class="p">,</span> <span class="s1">&#39;sizeArcSec&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;small326&#39;</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">resp</span> <span class="o">=</span> <span class="n">api</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cats/fetch_cone/by_catalog/&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;dec&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">27.831254438</span><span class="p">,</span> <span class="s1">&#39;ra&#39;</span><span class="p">:</span> <span class="mf">53.200010146</span><span class="p">,</span> <span class="s1">&#39;sizeArcSec&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="s1">&#39;catalog&#39;</span><span class="p">:</span> <span class="s1">&#39;small326&#39;</span><span class="p">})</span>
 <span class="c1"># OR</span>
-<span class="c1"># api.get(&#39;cats/rows/fetch_cone/by_catalog/?dec=-27.831254438&amp;ra=53.200010146&amp;sizeArcSec=30&amp;catalog=small326&#39;)</span>
+<span class="c1"># api.get(&#39;cats/fetch_cone/by_catalog/?dec=-27.831254438&amp;ra=53.200010146&amp;sizeArcSec=30&amp;catalog=small326&#39;)</span>
 </pre></div>
 
      </div>
@@ -15935,7 +15999,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">dfq</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">StringIO</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="p">))</span>
@@ -15957,7 +16021,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[47]:</div>
 
 
 
