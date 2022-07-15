@@ -1,5 +1,5 @@
 # Astronomical processing
-astropy==5.0.1
-astroquery==0.4.5
+astropy==5.1
+astroquery==0.4.6
 pyvo==1.3
 pywwt==0.15.2
