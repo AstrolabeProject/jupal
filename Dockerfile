@@ -1,10 +1,10 @@
-FROM jupyter/scipy-notebook:lab-3.2.9
+FROM jupyter/scipy-notebook:lab-3.4.4
 
 COPY jupyter_server_config.json /opt/conda/etc/jupyter/jupyter_server_config.json
 
 USER root
 
-# Install some extras curl, and wget
+# Install some extras
 RUN apt-get update \
     && apt-get install -y lsb gnupg curl \
     && apt-get clean \
