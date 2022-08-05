@@ -6,15 +6,13 @@ JOPTS='_JAVA_OPTIONS=-Xms512m -Xmx8192m -Djava.security.egd=file:///dev/urandom'
 NAME=jupal
 PORT=9999
 
-.PHONY: help docker exec run stop
+.PHONY: help docker exec stop
 
 help:
-	@echo 'Make what? help, docker, exec, run, stop'
+	@echo 'Make what? help, run, stop'
 	@echo '  where: help   - show this help message'
-	@echo '         docker - build a custom JupyterLab server image (for developers)'
-	@echo '         exec   - exec into the running JupyterLab server (CLI arg: NAME=containerID)'
-	@echo '         run    - start a standalone JupyterLab server'
-	@echo '         stop   - stop a standalone JupyterLab server'
+	@echo '         run    - start the customized standalone JupyterLab server'
+	@echo '         stop   - stop the customized standalone JupyterLab server'
 
 docker:
 	docker build -t ${IMG} .
