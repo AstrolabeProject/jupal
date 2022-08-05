@@ -1,6 +1,6 @@
 ﻿## JupAL - The Astrolabe Project customized version of JupyterLab
 
-This is a public code repository of the [Astrolabe Project](http://astrolabe.arizona.edu/) at the [University of Arizona](http://www.arizona.edu).
+This is a public code repository of the Astrolabe Project at the [University of Arizona](http://www.arizona.edu).
 
 **Author**: [Tom Hicks](https://github.com/hickst)
 
@@ -83,29 +83,33 @@ You should now be able access the JupyterLab server from within a browser on you
 
 The private AL/JWST Server provides API endpoints for programmatic access by authorized JWST project members. This API is useable from within the JupyterLab notebook by users who have login credentials.
 
-***Note**: Examples of using the Astrolabe server endpoints are included in the Sample Notebooks, described next.*
+***Note**: Examples of using the AL/JWST server endpoints are included in the sample notebooks, described next.*
 
 ### Sample Notebooks
 
 The JupAL image includes several sample notebooks, located in the `example-notebooks` directory. Note that these notebooks are read-only and cannot be altered or saved. You can, however, copy them or modify and save them into your work area.
 
   1. **PlotFromALWS.ipynb** - a notebook which demonstrates how to query, fetch, and display images and cutouts from the AL/JWST Server using Python and [Astropy](https://www.astropy.org/).
-  2. **CatalogsFromALWS.ipynb** - a notebook which demonstrates how to query the AL/JWST Server to retrieve catalog data via Python and Astropy).
+  2. **CatalogsFromALWS.ipynb** - a notebook which demonstrates how to query the AL/JWST Server to retrieve catalog data via Python and Astropy.
   3. **ALWS_utils.ipynb** - this notebook is imported and used by the previous two notebooks. It provides a helper class to interface with the AL/JWST Server API. You should not need to open or modify it.
   4. **UseSimbad.ipynb** - a small notebook demonstrating a simple [Simbad](http://simbad.u-strasbg.fr/simbad/) search using Python and Astropy.
 
   If you installed the optional WorldWide Telescope notebooks (as described above), they will be located in the `work/WWT` directory. Since they are installed in the `work` directory, these notebooks can be edited, updated, and saved, should you wish to do so:
 
-  4. **WWT Notebooks** - the JupAL image can run the example notebooks from the WorldWide Telescope [pywwt-notebooks](https://github.com/WorldWideTelescope/pywwt-notebooks) project. These beautiful notebooks demonstrate many of the capabilities of the [pywwt library](https://github.com/WorldWideTelescope/pywwt), which is included in the JupAL image.
+  5. **WWT Notebooks** - the JupAL image can run the example notebooks from the WorldWide Telescope [pywwt-notebooks](https://github.com/WorldWideTelescope/pywwt-notebooks) project. These beautiful notebooks demonstrate many of the capabilities of the [pywwt library](https://github.com/WorldWideTelescope/pywwt), which is included in the JupAL image.
 
 
 ## Stopping the local JupAL container
 
-In order to avoid losing work, the JupAL container is best stopped **from within** JupyterLab itself. **Be sure to save your work, from any modifed notebooks, before you shutdown JupyterLab.**
+In order to avoid losing work, the JupAL container is best stopped **from within**
+JupyterLab itself. **Be sure to save your work, from any modifed notebooks, before you
+shut down JupyterLab.**
 
- To shutdown JupyterLab, open the `File` menu in the JupyterLab menubar, and select the `Shut Down` menu item.
+ To shut down JupyterLab, open the `File` menu in the JupyterLab menubar, and select the `Shut Down` menu item.
 
-If you are unable to shutdown the JupAL container from within JupyterLab, you can, as a last resort, force the container to stop. **Forcing the container to stop is not recommended as a normal shutdown procedure because you can lose unsaved work and/or data.**
+If you are unable to shut down the JupAL container from within JupyterLab, you can, as a
+last resort, force the container to stop. **Forcing the container to stop is not
+recommended as a normal shut down procedure because you can lose unsaved work and/or data.**
 
 To force JupAL to stop:
 ```
